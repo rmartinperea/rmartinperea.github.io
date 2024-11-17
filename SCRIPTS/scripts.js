@@ -46,3 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Iniciar la primera imagen como activa
     images[0].classList.add('active');
 });
+
+/*NUESTRAS-OBRAS*/
+
+let indiceActual = 0; // Índice de la imagen activa
+const imagenes = document.querySelectorAll('.galeria-imagen img');
+
+// Función para cambiar de imagen
+function cambiarImagen(direccion) {
+    imagenes[indiceActual].classList.remove('activo'); // Quita la clase activo de la imagen actual
+    indiceActual = (indiceActual + direccion + imagenes.length) % imagenes.length; // Calcula el nuevo índice
+    imagenes[indiceActual].classList.add('activo'); // Agrega la clase activo a la nueva imagen
+}
+
+// Muestra la primera imagen al cargar la página
+imagenes[indiceActual].classList.add('activo');

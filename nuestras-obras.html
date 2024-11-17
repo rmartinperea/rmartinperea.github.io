@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Proyectos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <section class="proyectos">
+        <header class="proyectos-header">
+            <h2>Nuestros Proyectos</h2>
+            <p>Descubre algunas de nuestras obras más destacadas.</p>
+        </header>
+        <div class="galeria">
+            <button class="galeria-flecha izquierda" onclick="cambiarImagen(-1)">&#10094;</button>
+            <div class="galeria-imagen">
+                <img src="casa_papa.jpeg" alt="Proyecto 1" class="activo">
+                <img src="casa_papa2.jpeg" alt="Proyecto 2">
+                <img src="foto casa minimalista.jpg" alt="Proyecto 3">
+                <img src="casa_papa2.jpeg" alt="Proyecto 4">
+            </div>
+            <button class="galeria-flecha derecha" onclick="cambiarImagen(1)">&#10095;</button>
+        </div>
+    </section>
+    <script src="SCRIPTS/scripts.js"></script>
+</body>
+</html>
