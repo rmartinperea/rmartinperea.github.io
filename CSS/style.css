@@ -19,8 +19,6 @@ a {
     text-decoration: none;
 }
 
-
-
 /* Barra de contacto inicial */
 .header-contacto {
     background-color:#000;
@@ -79,11 +77,13 @@ a {
 }
 
 .header-principal img{
-    width: 160px;  /* Ancho de la imagen */
-    height: 160px; /* Alto de la imagen */
-    margin-top: 22px;
+        width: 260px; /* Tamaño deseado */
+        height: 260px; /* Tamaño deseado */
+        object-fit: contain; /* Mantiene la proporción sin recortar */
+        padding-bottom: 100px;
+        margin-top: 20px;
+    }
 
-}
 
 /* Al hacer scroll */
 .header-principal.fixed-header {
@@ -198,11 +198,11 @@ a {
     font-family: 'Playfair Display', serif;    
     background-color: transparent;
     color: #000;
-    border:#000;
+    border: 1px solid #000; 
     cursor: pointer;
-    font-size: 22px;
+    font-size: 20px;
     transition: color 0.5s ease;  /* Transición suave para el color del texto */
-
+    
 }
 
 /* Efecto al pasar el cursor */
@@ -216,8 +216,13 @@ a {
     filter: brightness(100%);
 }
 
-.descripcion, .servicios, .informacion, .footer, .galeria {
+.descripcion, .servicios, .informacion, .footer {
     padding: 70px;
+    text-align: justify;
+}
+
+.galeria{
+    padding: 2px;
     text-align: justify;
 }
 
@@ -310,6 +315,13 @@ a {
     box-shadow: 0 -4px 10px rgba(104, 104, 104, 0.1); /* Sombra superior para elegancia */
 }
 
+.footer img {
+    width: 400px;  /* Ancho de la imagen */
+    height: 400px;
+    margin-top: 60px;/* Alto de la imagen */
+    object-fit: cover;
+
+}
 
 
   /* sección CONSTRUCCIÓN DE CASAS LLAVE EN MANO */
@@ -538,96 +550,52 @@ a {
     }
 }
 
-/* GALERÍA MINIMALISTA */
-.galeria {
+/* NUESTROS PROYECTOS */
+
+.galeria-scroll {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 100%; /* La galería ocupa todo el ancho disponible */
-    height: 80vh; /* Ajusta la altura de las imágenes */
-    overflow: hidden; /* Oculta las imágenes fuera de la vista */
-    border-radius: 10px; /* Bordes redondeados para un toque elegante */
+    flex-direction: column; /* Apila las imágenes verticalmente */
+    scroll-snap-type: y mandatory; /* Activa el scroll snap en el eje vertical */
+    overflow-y: scroll; /* Habilita el scroll vertical */
+    height: 100vh; /* Cada imagen ocupará el 100% de la pantalla */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento (Firefox) */
 }
 
-.galeria-imagen {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    height: 100%; /* Asegura que las imágenes se ajusten al contenedor */
+.galeria-scroll::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento (Chrome, Safari) */
 }
 
-.galeria-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta las imágenes sin deformarlas */
-    display: none; /* Solo la imagen activa será visible */
-    transition: opacity 0.5s ease-in-out;
+.galeria-scroll img {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    object-fit: cover; /* Escala las imágenes proporcionalmente, cortando lo que sobrepase */
+    scroll-snap-align: start; /* Cada imagen se alinea al inicio al hacer scroll */
 }
 
-.galeria-imagen img.activo {
-    display: block;
-    opacity: 1; /* Imagen visible */
-}
-
-/* FLECHAS DE LA GALERÍA */
-.galeria-flecha {
-    background-color: rgba(0, 0, 0, 0.2); /* Fondo translúcido negro */
-    color: #fff;
-    font-size: 2rem;
+.comentario {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    border: none; /* Sin bordes */
-    padding: 10px;
-    z-index: 10;
-    border-radius: 50%; /* Botones circulares */
-    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px; /* Tamaño del botón */
-    height: 50px;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
 }
 
-.galeria-flecha:hover {
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo más oscuro al pasar el ratón */
-    transform: translateY(-50%) scale(1.1); /* Agrandamiento sutil */
+.comentario p {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #fff; /* Línea fina elegante */
+    padding-bottom: 5px; /* Espacio antes de la línea */
 }
 
-.galeria-flecha.izquierda {
-    left: 20px;
-}
 
-.galeria-flecha.derecha {
-    right: 20px;
-}
 
-/* ICONOS DE LAS FLECHAS */
-.galeria-flecha::before {
-    content: ''; /* Espacio vacío por defecto */
-    display: inline-block;
-    width: 10px; /* Tamaño del triángulo */
-    height: 10px;
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(-135deg);
-}
 
-.galeria-flecha.derecha::before {
-    transform: rotate(45deg); /* Gira el triángulo para la flecha derecha */
-}
 
-/* Hacer que la galería sea responsiva */
-@media (max-width: 768px) {
-    .galeria {
-        height: 160vh; /* Reduce la altura en pantallas más pequeñas */
-    }
 
-    .galeria-flecha {
-        font-size: 1.5rem; /* Reduce el tamaño de las flechas */
-        width: 70px;
-        height: 70px;
-    }
-}
+
+
+
