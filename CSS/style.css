@@ -263,14 +263,22 @@ a {
 .nosotros {
     padding: 10px;
 }
+.servicios h2{
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;   font-weight: 400; /* Roboto Light */
+    text-align: center;
+}
 
-.servicios h2, .informacion h2, .galeria h2 {
+ .informacion h2, .galeria h2 {
     font-size: 1.6rem;
     color: #000000;
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;   font-weight: 400; /* Roboto Light */
     text-align: left;
 }
+
 
 .nosotros h2, .nosotros h3, .nosotros h1 {
     font-size: 1.7rem;
@@ -428,7 +436,7 @@ a {
 
 /* General footer styles */
 .footer2 {
-    background-color:white; /* Color de fondo elegante */
+    background-color:beige; /* Color de fondo elegante */
     color: #fff; /* Color de texto claro */
     padding: 40px 20px; /* Espaciado interno */
 }
@@ -514,6 +522,10 @@ a {
         margin-bottom: 20px;
     }
 }
+.small-text {
+    font-size: 0.9em; /* Cambia el tamaño según lo que necesites */
+    
+  } 
 
 
 /* Estilos generales de la sección de contacto */
@@ -653,7 +665,6 @@ a {
 
 
 /*NOSOTROS*/
-
 .body-nosotros{
     justify-content: center;
     align-items: center;
@@ -688,50 +699,30 @@ a {
 
 /* NUESTROS PROYECTOS */
 
-.galeria-scroll {
-    display: flex;
-    flex-direction: column; /* Apila las imágenes verticalmente */
-    scroll-snap-type: y mandatory; /* Activa el scroll snap en el eje vertical */
-    overflow-y: scroll; /* Habilita el scroll vertical */
-    height: 100vh; /* Cada imagen ocupará el 100% de la pantalla */
-    scrollbar-width: none; /* Oculta la barra de desplazamiento (Firefox) */
-}
-
-.galeria-scroll::-webkit-scrollbar {
-    display: none; /* Oculta la barra de desplazamiento (Chrome, Safari) */
-}
-
-.galeria-scroll img {
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    object-fit: cover; /* Escala las imágenes proporcionalmente, cortando lo que sobrepase */
-    scroll-snap-align: start; /* Cada imagen se alinea al inicio al hacer scroll */
-}
-
-.comentario {
-    position: absolute;
-    bottom: 70px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    background-color: transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.comentario p {
-    margin: 0;
-    padding: 0;
-    border-bottom: 1px solid #fff; /* Línea fina elegante */
-    padding-bottom: 5px; /* Espacio antes de la línea */
+.body-nuestrosproyectos{
+    justify-content: center;
+    align-items: center;    
 }
 
 
+.fondo img {
+    position: fixed; /* Fija el elemento al fondo de la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa todo el alto */
+    background-image: url('C:\Users\ruben\Desktop\Proyecto_MINIMAL\Minimal\foto-hero.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Escala la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+    background-attachment: fixed; /* Hace que el fondo no se mueva con el scroll */
+}
 
-
-
-
-
+.nuestrosproyectos {
+    position: relative; /* Asegura que el contenido quede sobre el fondo */
+    color: white; /* Texto visible sobre el fondo */
+    padding: 20px;
+}
 
 
