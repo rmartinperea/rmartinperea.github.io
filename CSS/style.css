@@ -58,6 +58,8 @@ a {
 
 
 /* Estilo general del header */
+
+
 .header-principal {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -75,6 +77,7 @@ a {
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);  /* Sombra para dar profundidad */
     transition: padding 0.8s ease, height 0.8s ease;  /* Transiciones suaves para padding y altura */
 }
+
 
 .header-principal img{
         width: 260px; /* Tamaño deseado */
@@ -134,6 +137,37 @@ a {
     width: 100%;  /* Expande la línea al 100% de la anchura del botón */
 }
 
+
+/* Estilo adaptado para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header-principal {
+        flex-direction: column; /* Apila elementos verticalmente */
+        align-items: center; /* Centra los elementos */
+        padding: 10px; /* Reduce el padding */
+        height: auto; /* Deja que la altura se ajuste al contenido */
+    }
+
+    .header-principal img {
+        width: 60px; /* Logo más pequeño */
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .header-buttons {
+        flex-direction: column; /* Apila los botones verticalmente */
+        align-items: center;
+        gap: 10px; /* Espaciado más ajustado */
+    }
+
+    .header-button {
+        font-size: 14px; /* Tamaño más pequeño */
+        padding: 5px 10px;
+    }
+
+    .header-button::after {
+        bottom: -2px;
+    }
+}
 /* Evitar que el contenido quede oculto debajo del header fijo */
 
 
@@ -226,13 +260,37 @@ a {
     text-align: justify;
 }
 
+.nosotros {
+    padding: 10px;
+}
+
 .servicios h2, .informacion h2, .galeria h2 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #000000;
     margin-bottom: 15px;
     font-family: 'Playfair Display', serif;   font-weight: 400; /* Roboto Light */
-    text-align: center;
+    text-align: left;
 }
+
+.nosotros h2, .nosotros h3, .nosotros h1 {
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;   font-weight: 400; /* Roboto Light */
+    text-align: center;
+
+}
+
+
+.nosotros p{
+        text-align: center;
+        font-weight: 400;
+        line-height: 1.8;
+        margin: 20px auto; /* Centra el texto y agrega espacio alrededor */
+        color: #424141;
+    }
+
+
 
 .servicios h3 {
     color: #000000;
@@ -298,6 +356,7 @@ a {
 
 /* Estilo para el contenedor de texto */
 .informacion-texto {
+    text-align: left;
     flex: 1; /* Expande el bloque de texto para ocupar el espacio restante */
     max-width: 400px; /* Limita el ancho del texto para un diseño más sofisticado */
     line-height: 1.8; /* Espaciado entre líneas para mejor legibilidad */
@@ -367,53 +426,95 @@ a {
 
 
 
+/* General footer styles */
 .footer2 {
-    background-color: #ffffff; /* Fondo negro */
-    color: #000000; /* Texto blanco */
-    padding: 40px 20px;
-    text-align: center;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra superior para elegancia */
-
+    background-color:white; /* Color de fondo elegante */
+    color: #fff; /* Color de texto claro */
+    padding: 40px 20px; /* Espaciado interno */
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Disposición flexible en columnas */
-    gap: 20px; /* Espacio entre las columnas */
-    justify-items: center; /* Centra los elementos dentro de cada columna */
+.footer2 .footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en pantallas pequeñas */
+    justify-content: space-between; /* Distribución uniforme */
+    align-items: flex-start; /* Alineación superior */
+    gap: 20px; /* Espaciado entre columnas */
+}
+
+.footer2 h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000; /* Destaca los títulos */
+}
+
+.footer2 p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Footer Logo */
+.footer-logo {
+    flex: 1 1 200px; /* Espaciado flexible */
+    text-align: center; /* Centrado */
 }
 
 .footer-logo-img {
-    width: 200px; /* Tamaño del logo, puedes ajustar según el tamaño real del logo */
+    width: 120px; /* Tamaño del logo */
     height: auto;
-    margin-bottom: 20px;
 }
 
-.footer-description {
-    font-size: 14px; /* Tamaño de texto más pequeño para la descripción */
-    max-width: 300px; /* Límite de ancho para la descripción */
-    margin: 0 auto; /* Centra la descripción */
+/* Footer Contact Info */
+.footer-contact,
+.footer-rrss,
+.footer-hours {
+    flex: 1 1 200px; /* Espaciado flexible */
+    min-width: 150px; /* Asegura que no se colapsen */
 }
 
-.footer-contact, .footer-hours {
-    font-size: 16px; /* Tamaño de texto para contacto y horarios */
+.footer-rrss {
+    text-align: center; /* Centra el contenido */
 }
 
-.footer h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: bold;
+.footer-rrss img {
+    width: 32px; /* Ajusta el tamaño de los logos */
+    height: auto;
+    margin: 0 15px; /* Espaciado uniforme entre logos */
+    vertical-align: middle; /* Alineación vertical con el texto */
+    transition: transform 0.3s ease-in-out; /* Efecto hover suave */
 }
 
-.footer p {
-    margin: 5px 0;
+.footer-rrss img:hover {
+    transform: scale(1.2); /* Efecto de zoom al pasar el cursor */
 }
 
+.footer-rrss a {
+    display: inline-block; /* Cada logo será clicable y alineado */
+}
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr; /* En pantallas pequeñas, los elementos se apilan en una sola columna */
+    .footer2 .footer-content {
+        flex-direction: column; /* Apila las columnas */
+        align-items: center; /* Centra el contenido */
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-rrss,
+    .footer-hours {
+        flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
     }
 }
+
 
 /* Estilos generales de la sección de contacto */
 .contacto {
@@ -549,6 +650,41 @@ a {
         height: 30px;
     }
 }
+
+
+/*NOSOTROS*/
+
+.body-nosotros{
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2d2d;
+    
+}
+
+.hero-trans {
+    display: flex;
+    padding: 70px;
+
+}
+
+.nosotros{
+    padding: auto;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.nosotros p{
+    text-align:left;
+    font-weight: 600;
+    font-size:x-large;
+    line-height: 1.8;
+    margin: 20px auto; /* Centra el texto y agrega espacio alrededor */
+    color: #ffffff;
+}
+
+
 
 /* NUESTROS PROYECTOS */
 
