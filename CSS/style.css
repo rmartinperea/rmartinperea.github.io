@@ -372,7 +372,7 @@ a {
 
 
 
-.footer {
+.texto3d {
     background-color: #ffffff79; /* Elegante color oscuro */
     padding: 20px; /* Espaciado interno amplio */
     text-align: center; /* Texto centrado */
@@ -382,14 +382,52 @@ a {
     box-shadow: 0 -4px 10px rgba(104, 104, 104, 0.1); /* Sombra superior para elegancia */
 }
 
-.footer img {
-    width: 400px;  /* Ancho de la imagen */
-    height: 400px;
-    margin-top: 60px;/* Alto de la imagen */
-    object-fit: cover;
+.carousel {
+    position: relative;
+    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    width: 100%; /* Ajusta el ancho del carrusel */
+    max-width: 800px; /* Máximo ancho del carrusel */
+    margin: 0 auto; /* Centra el carrusel */
+  }
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Animación al deslizar */
+  }
+
+.carousel img {
+    height: auto;
+    width: 100%;
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
 
 }
 
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Fondo semitransparente */
+    color: #000000;
+    border: none;
+    font-size: 2rem;
+    cursor:auto;
+    padding: 10px;
+    z-index: 2;
+   
+  }
+  
+  .carousel-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-button.next {
+    right: 10px;
+  }
+  
+  /* Efecto hover en botones */
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
   /* sección CONSTRUCCIÓN DE CASAS LLAVE EN MANO */
   .galeria {
