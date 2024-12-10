@@ -20,6 +20,7 @@ a {
 }
 
 /* Barra de contacto inicial */
+
 .header-contacto {
     background-color:#000;
     color: #ffffff;
@@ -386,7 +387,7 @@ a {
     position: relative;
     overflow: hidden; /* Oculta las imágenes que no están visibles */
     width: 100%; /* Ajusta el ancho del carrusel */
-    max-width: 800px; /* Máximo ancho del carrusel */
+    max-width: 700px; /* Máximo ancho del carrusel */
     margin: 0 auto; /* Centra el carrusel */
   }
 
@@ -399,7 +400,6 @@ a {
     height: auto;
     width: 100%;
     object-fit: contain; /* Ajusta la imagen sin recortarla */
-
 }
 
 .carousel-button {
@@ -413,7 +413,6 @@ a {
     cursor:auto;
     padding: 10px;
     z-index: 2;
-   
   }
   
   .carousel-button.prev {
@@ -763,4 +762,78 @@ a {
     padding: 20px;
 }
 
+
+
+/* Ajustes generales para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Barra de contacto inicial */
+    .header-contacto {
+        font-size: 0.7rem; /* Texto más pequeño */
+        padding: 5px; /* Reducir padding para menos espacio ocupado */
+        text-align: center; /* Centrado para simplificar diseño */
+    }
+
+    /* Header principal */
+    .header-principal {
+        padding: 5px 10px; /* Menor padding en dispositivos pequeños */
+        height: 90px; /* Reducir altura */
+    }
+
+    .header-principal img {
+        width: 150px; /* Logo más pequeño */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 60vh; /* Menor altura para evitar scroll */
+    }
+
+    .hero img {
+        height: auto; /* Mantener proporción de la imagen */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Reducir tamaño de fuente */
+    }
+
+    /* Sección de servicios */
+    .servicios {
+        padding: 20px; /* Menor padding general */
+    }
+
+    .servicios h2 {
+        font-size: 1.5rem; /* Reducir tamaño del título */
+    }
+
+    .servicios-imagen img {
+        width: 100%; /* Ajustar al ancho disponible */
+        height: auto; /* Mantener proporción */
+    }
+
+    .texto h3 {
+        font-size: 1.2rem; /* Reducir título */
+    }
+
+    .texto p {
+        font-size: 0.9rem; /* Texto más compacto */
+    }
+
+    /* Carrusel */
+    .carousel img {
+        width: 100%; /* Imágenes ocupan el ancho completo */
+        height: auto; /* Mantener proporción */
+    }
+
+    /* Botón del carrusel */
+    .carousel button {
+        font-size: 0.8rem; /* Botones más pequeños */
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px; /* Menor padding para compactar */
+        font-size: 0.8rem; /* Reducir texto */
+        text-align: center; /* Centrar contenido */
+    }
+}
 
