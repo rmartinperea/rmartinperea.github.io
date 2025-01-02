@@ -185,7 +185,7 @@ a {
 .hero {
     position: relative;
     text-align: center;
-    height: 110vh; /* Puedes ajustar la altura del Hero según tus necesidades */
+    min-height: 110vh; /* Puedes ajustar la altura del Hero según tus necesidades */
     overflow: hidden; /* Asegura que las imágenes que salen del contenedor no se vean */
     margin-top: -80px;
 }
