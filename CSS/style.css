@@ -545,7 +545,22 @@ a {
 }
 
 
+
+
 /* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        margin-bottom: 10px;
+    }
+
+    .proyecto {
+        margin-top: 10px;
+    }
+}
+
+
+
+
 @media (max-width: 768px) {
     .footer2 .footer-content {
         flex-direction: column; /* Apila las columnas */
@@ -572,6 +587,13 @@ a {
     }
     .footer2 p {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicios-imagen, .informacion {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
