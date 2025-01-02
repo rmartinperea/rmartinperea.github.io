@@ -251,6 +251,13 @@ a {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .boton-proyecto {
+        bottom: 10px; /* Ajustar en móviles */
+        right: 10px;
+    }
+}
+
 
 .hero img:hover {
     filter: brightness(100%);
@@ -432,6 +439,13 @@ a {
   .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+  @media (max-width: 768px) {
+    .carousel-track {
+        margin: 0 auto; /* Centra el contenido */
+        max-height: 300px; /* Ajusta la altura en pantallas pequeñas */
+    }
+}
 
   /* sección CONSTRUCCIÓN DE CASAS LLAVE EN MANO */
   .galeria {
