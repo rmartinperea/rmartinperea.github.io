@@ -831,7 +831,7 @@ a {
     }
 
     .hero h2 {
-        font-size: 1.5rem; /* Reducir tamaño de fuente */
+        font-size: clamp(1.5rem, 4vw, 3rem); /* Reducir tamaño de fuente */
     }
 
     /* Sección de servicios */
