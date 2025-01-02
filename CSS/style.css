@@ -95,6 +95,11 @@ a {
     height: 50px;  /* Ajusta la altura del header cuando se hace scroll */
 }
 
+.header-principal.fixed-header img {
+    width: 200px; /* Tamaño intermedio para transición */
+    transition: width 0.5s ease, padding 0.5s ease;
+}
+
 
 
 /* Contenedor de los botones */
@@ -796,34 +801,27 @@ a {
         font-size: 1.5rem; /* Reducir tamaño de fuente */
     }
 
-   /* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-    .servicios-imagen {
-        flex-direction: column; /* Apila la imagen y el texto verticalmente */
-        gap: 20px; /* Reduce el espacio entre los elementos */
+    /* Sección de servicios */
+    .servicios {
+        padding: 20px; /* Menor padding general */
+    }
+
+    .servicios h2 {
+        font-size: 1.5rem; /* Reducir tamaño del título */
     }
 
     .servicios-imagen img {
-        width: 90%; /* La imagen ocupará el 90% del contenedor */
-        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
-        margin-top: 20px; /* Reduce el margen superior */
-    }
-
-    .texto {
-        max-width: 100%; /* El bloque de texto ocupará el 100% del ancho */
-        text-align: center; /* Centra el texto para mejorar la visualización */
-        margin: 10px auto; /* Espacio reducido alrededor del texto */
+        width: 100%; /* Ajustar al ancho disponible */
+        height: auto; /* Mantener proporción */
     }
 
     .texto h3 {
-        font-size: 1.1em; /* Tamaño más pequeño del título */
+        font-size: 1.2rem; /* Reducir título */
     }
 
-    .divider {
-        width: 30px; /* Reduce el ancho de la línea */
-        margin: 5px 0; /* Ajusta el espacio de la línea */
+    .texto p {
+        font-size: 0.9rem; /* Texto más compacto */
     }
-}
 
     /* Carrusel */
     .carousel img {
