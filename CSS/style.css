@@ -252,7 +252,7 @@ a {
 }
 
 @media (max-width: 768px) {
-    .boton-proyecto {
+    .hero button {
         bottom: 10px; /* Ajustar en móviles */
         right: 10px;
     }
