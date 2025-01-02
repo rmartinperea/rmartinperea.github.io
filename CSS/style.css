@@ -564,6 +564,17 @@ a {
         margin-bottom: 20px;
     }
 }
+
+
+@media (max-width: 480px) {
+    .footer2 h3 {
+        font-size: 1rem;
+    }
+    .footer2 p {
+        font-size: 0.8rem;
+    }
+}
+
 .small-text {
     font-size: 0.9em; /* Cambia el tamaño según lo que necesites */
     
